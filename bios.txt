@@ -1,0 +1,38 @@
+giGabiga11_11
+
+Alexander "AJ" Root
+Email: ajroot@stanford.edu
+Field: Compilers and Graphics, Fred Kjolstad’s lab
+Blurb: My name’s AJ, I’m a third year PhD working on new programming languages for graphics! I did undergrad and a masters at MIT, where I was involved with the FLI program.
+
+Aron Ricardo Perez-Lopez
+Name: Áron Ricardo Perez-Lopez
+Email: arpl@cs.stanford.edu
+Field: Systems / formal verifications
+Blurb: I'm a third year student in Clark Barrett's lab working on SMT-based model checking. I'm interested in all aspects of hardware and software verification. Apart from the Advisory Council, I am involved in the Graduate Student Council and The Stanford Daily. I love spending time outdoors in all four seasons going walking, hiking, running, biking, skiing, and skating.
+
+Hanna Lachnitt
+Email: lachnitt@stanford.edu
+Field: Systems, CENTAUR lab, advised by Clark Barrett
+Blurb: I was an advisory council chair from 2022-2023 and worked on appreciation awards, the rotation survey, tea times and many other projects! Currently, I am launching a faculty allies program for PhD students to connect students who need advice to faculty volunteers. In my free time I enjoy hiking, crafts such as crocheting and knitting and playing board games.
+
+Liza Pertseva
+Email: pertseva@stanford.edu
+Field: Systems
+Blurb: Hi! I am a second year C.S Ph.D in systems advised by Professor Clark Barrett and am part of the Stanford Centaur Lab. I am interested in formal verification, automated reasoning and programming languages! I also love hiking and sailing. Please feel free to reach out with any questions about research or questions about Stanford (rotations, classes etc).
+
+Michal Gerasimiuk
+Michał Gerasimiuk
+Email: gerasimiuk@stanford.edu
+Field: Computational Biology
+Blurb: I'm a second year Ph.D. student interested in brain–computer interfaces, systems neuroscience, and broadly the intersection of computing and biotechnology. I'm comes from Białystok, Poland, and got my B.S. in computer science at Yale. Feel free to reach out to him if you’d like to talk about international student experiences or interdisciplinary work outside our department
+
+Nikil Selvam
+Email: nikilrs@stanford.edu
+Field: Probabilistic Modeling, Trustworthy AI
+Blurb: Hi, I’m Nikil! I’m a second year PhD student here on the AI track. Happy to chat about anything CS@Stanford or life in general!
+
+Zhiqiang Xie
+Email: xiezhq@stanford.edu
+Field: HCI
+Blurb: Hi, I'm a third year PhD student in HCI, happy to chat!
