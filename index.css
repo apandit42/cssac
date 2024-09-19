@@ -1,29 +1,315 @@
-/*
-* The font and color choices are from the official Stanford guide:
-* https://identity.stanford.edu/design-elements/color/
-* https://identity.stanford.edu/design-elements/typography/
+/* 
+* FONTS SETUP
+* Defined in official Stanford guide: https://identity.stanford.edu/design-elements/typography/
+* Sourced from Google Fonts: https://fonts.google.com/share?selection.family=Source+Sans+3:ital,wght@0,200..900;1,200..900|Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900
+* Fonts: "Source Sans 3", "Source Serif 4"
 */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
-/* Font Import from Google */
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+/*
+* COLORS SETUP
+* Defined in official Stanford guide: https://identity.stanford.edu/design-elements/color/
+*/
+:root {
+  --cardinal-red: #8C1515;
+  --cardinal-red-light: #B83A4B;
+  --cardinal-red-dark: #820000;
+
+  --white: #FFFFFF;
+  --black: #2E2D29;
+  --cool-grey: #53565A;
+
+  --digital-red: #B1040E;
+  --light-red: #E50808;
+  --dark-red: #820000;
+  --digital-blue: #006CB8;
+  --light-blue: #6FC3FF;
+  --dark-blue: #00548F;
+  --digital-green: #008566;
+  --light-green: #1AECBA;
+  --dark-green: #006F54;
+}
+
+/*
+* 
+* BASELINE SETUP
+*
+*/
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--digital-blue);
+}
+
+a:hover, a:focus {
+  color: var(--light-blue);
+}
+
+a:visited {
+  color: var(--dark-blue);
+}
+
+
+/* 
+* 
+* NAVBAR SETUP 
+*
+*/
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;  
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  background-color: var(--cardinal-red);
+}
+
+.navbar__link, .navbar__link:visited {
+  flex-basis: content;
+  text-decoration: none; 
+  margin: 0 1.5rem;
+  color: var(--white);
+  white-space: nowrap;
+  transition: font-size 0.3s;
+}
+
+.navbar__link:hover, .navbar__link:focus {
+  font-size: 1.8rem;
+  transition: font-size 0.3s;
+}
+
+.navbar__link--home {
+  font-size: 2rem;
+  margin-right: auto;
+  transition: font-size 0.3s;
+}
+
+.navbar__link--home:hover, .navbar__link--home:focus {
+  font-size: 2.2rem;
+  margin-right: auto;
+  transition: font-size 0.3s;
+}
+
+.navbar__icon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1.5rem;
+  transition: transform 0.3s;
+}
+
+.navbar__icon--clicked {
+  transform: rotate(270deg);
+  transition: transform 0.3s;
+  margin: 0 1.3rem;
+}
+
+.navbar__dropdown {
+  display: none;
+  flex-basis: 100%;
+  flex-direction: column;
+  align-items: center; 
+  padding: 1rem;
+  background-color: var(--digital-red);
+  transition: height 0.3s;
+}
+
+.navbar__dropdown__link, .navbar__dropdown__link:visited {
+  text-decoration: none; 
+  color: var(--white);
+  transition: height 0.3s;
+}
+
+.navbar__dropdown__link:hover, .navbar__dropdown__link:focus {
+  font-size: 1.8rem;
+  transition: font-size 0.3s;
+}
+
+/* Hide dropdown menu when screen is big enough */
+@media screen and (width >= 520px) {
+  .navbar__icon {
+    display: none;
     padding: 0;
-    margin: 0;
-    font-family: "Source Sans 3", sans-serif;
-    font-size: 1rem;
-    display: grid;
-    grid-template-rows: 40vh 30vh 1fr;
-    grid-template-columns: 1fr 8fr 1fr;
+  }
 }
 
-.content {
-    background-color: grey;
-    grid-row: 2 / 4;
-    grid-column: 2 / 3;
-    z-index: 10;
+/* Hide navbar links when screen is too small */
+@media screen and (width < 520px) {
+  .navbar__link {
+    display: none;
+  }
+
+  .navbar__link--home {
+    display: block;
+  }
+
+  .navbar--dropdown {
+    flex-wrap: wrap;
+    padding: 0.5rem 0 0 0;
+  }
+
+  .navbar__dropdown--clicked {
+    display: flex;
+  }
 }
 
 
+/* 
+* 
+* SECTION PARALLAX SETUP
+*
+*/
+.section {
+  margin-top: 2rem;
+  padding-top: 40vh;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about {
+  background-image: url("img/backgrounds/gates2.jpg");
+}
+
+#members {
+  background-image: url("img/backgrounds/gates3.jpg");
+}
+
+#contact {
+  background-image: url("img/backgrounds/gates4.jpg");
+}
+
+.section__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10vw 5vh;
+  background-color: var(--white);
+}
+
+.section__text__header {
+  flex-grow: 1;
+  margin: 4rem 0 3rem;
+  font-family: "Source Serif 4";
+  font-size: 5rem;
+  font-weight: bold;
+  color: var(--black);
+  text-align: center;
+}
+
+/* For mobile, shrink text */
+@media screen and (width < 520px) {
+  .section__text__header {
+    font-size: 3rem;
+  }
+}
+.section__text__content {
+  flex-grow: 1;
+  color: var(--cool-grey);
+}
+
+.section__text__content--cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.biocard {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.biocard__imagewrapper {
+  flex: 0 0 20vw;
+  width: 20vw;
+  height: 20vw;
+}
+
+.biocard__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.biocard__text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
+.biocard__name {
+  font-weight: bold;
+}
+
+.biocard__research {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.biocard__bio {
+  font-size: 1.2rem;
+}
+
+/* Make it work on mobile by wrapping */
+@media screen and (width < 600px) {
+  .biocard {
+    flex-wrap: wrap;
+  }
+
+  .biocard__imagewrapper {
+    flex: 0 0 50vw;
+    width: 50vw;
+    height: 50vw;
+    margin-bottom: 2rem;
+  }
+}
+
+.button__wrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.button, .button:visited {
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--digital-green);
+  font-weight: bold;
+  font-size: 2rem;
+  transition: all 0.3s;
+}
+
+.button:hover, .button:focus {
+  transform: scale(1.2);
+  background-color: var(--light-green);
+  transition: all 0.3s;
+}
