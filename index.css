@@ -1,18 +1,15 @@
 /*
-* Quick Notes - Hello world :)
 * The font and color choices are from the official Stanford guide:
 * https://identity.stanford.edu/design-elements/color/
 * https://identity.stanford.edu/design-elements/typography/
-*
-* Other style stuff is on a whim
 */
 
 /* Font Import from Google */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 body {
+    height: 100%;
     width: 100%;
-    min-height: 100vh;
     padding: 0;
     margin: 0;
     font-family: "Source Sans 3", sans-serif;
