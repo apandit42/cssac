@@ -245,9 +245,9 @@ a:focus {
 }
 
 .biocard__imagewrapper {
-  flex: 0 0 20vw;
-  width: 20vw;
-  height: 20vw;
+  flex: 0 0 15vw;
+  width: 15vw;
+  height: 15vw;
 }
 
 .biocard__image {
