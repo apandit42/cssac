@@ -280,7 +280,7 @@ a:focus {
 }
 
 /* Make it work on mobile by wrapping */
-@media screen and (width < 600px) {
+@media screen and (width < 700px) {
   .biocard {
     flex-wrap: wrap;
   }
