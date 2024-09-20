@@ -315,6 +315,7 @@ a:focus {
 .button:hover,
 .button:focus {
   transform: scale(1.2);
+  color: var(--white);
   background-color: var(--light-green);
   transition: all 0.3s;
 }
